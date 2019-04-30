@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+    -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.semanticui.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h5 class="card-header">Planeación Didactica</h5>
+            <div class="card-body">
+                <h5 class="card-title">Profesor</h5>
+                <p class="card-text">José Francisco Peralta Ramos</p>
+                <h5 class="card-title">Sección</h5>
+                <p class="card-text">1</p>
+                <h5 class="card-title">Periodo</h5>
+                <p class="card-text">201901</p>
+                <div id="tabla" class="table-responsive">
+                    <div class="" id="boxTablaDatos"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.semanticui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.salesup.com/v1/dist/suLib.min.js"></script>
+    <script type="text/javascript" src="https://cdn.salesup.com/v1/dist/suApp.min.js"></script>
+    
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script src="main.js"></script>
+    
+    <script>
+            su.main = new main();
+
+            let tk = su.main.obtenerParametro('token');
+
+            su.main.init({
+                token:tk
+            });
+    </script>
+</body>
+</html>

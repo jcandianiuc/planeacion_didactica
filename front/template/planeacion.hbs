@@ -1,0 +1,38 @@
+<templates>
+    <script id="contenedorTablas" type="text/x-handlebars-template">
+        <div class="table-responsive" id="tabla"></div>
+    </script>
+    
+    <script id="head" type="text/x-handlebars-template">
+        <tr>
+			<th>Sesión</th>
+			<th>Experiencia</th>
+            <th>Estrategia</th>
+            <th>Técnica</th>
+            <th>Ambiente</th>
+            <th>Modalidad</th>
+            <th>TextoModalidad</th>
+            <th>Recurso</th>
+            <th>TextoRecurso</th>
+            <th>Producto</th>
+            <th>TextoProducto</th>
+        </tr>
+    </script>
+
+    <script id="body" type="text/x-handlebars-template">
+    	<tr id="log{{idSuceso}}">
+			<td >{{Sesion}}</td>
+			<td>{{Experiencia}}</td>
+            <td>{{Estrategia}}</td>
+            <td>{{Tecnica}}</td>
+            <td>{{Ambiente}}</td>
+            <td>{{Modalidad}}</td>
+            <td>{{TextoModalidad}}</td>
+            <td>{{Recurso}}</td>
+            <td>{{TextoRecurso}}</td>
+            <td>{{Producto}}</td>
+            <td>{{TextoProducto}}</td>
+		</tr>
+    </script>
+
+</templates>
