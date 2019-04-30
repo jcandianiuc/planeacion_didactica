@@ -1,0 +1,36 @@
+Sesion,Numero de tema,Tema,Estrategia
+1,0,el marco epistemológico,DHP
+2,0,el marco epistemológico,DAV
+3,1,el modelo conductista,ACC
+4,1,el modelo conductista,DHP
+5,2,el modelo constructivista,DAV
+6,2,el modelo constructivista,ACC
+7,3,el modelo conectivista,DHP
+8,3,el modelo conectivista,DAV
+9,4,las modalidades emergentes,ACC
+10,4,las modalidades emergentes,DHP
+11,5,el aula invertida,DAV
+12,5,el aula invertida,ACC
+13,6,el aprendizaje Semipresencial (B-Learning),DHP
+14,6,el aprendizaje Semipresencial (B-Learning),DAV
+15,7,el aprendizaje en línea (E-Learning),ACC
+16,7,el aprendizaje línea (E-Learning),DHP
+17,8,el aprendizaje con dispositivos móviles (M-Learning),DAV
+18,8,el aprendizaje con dispositivos móviles (M-Learning),ACC
+19,9,la ludificación en las organizaciones,DHP
+20,9,la ludificación en las organizaciones,DAV
+1,10,socializar la planeación didáctica,ACC
+21,11,el material en línea,DHP
+22,11,el material en línea,DAV
+23,12,las herramientas de autoría,ACC
+24,12,las herramientas de autoría,DHP
+25,13,las herramientas de refuerzo,DAV
+26,13,las herramientas de refuerzo,ACC
+27,14,el diseño para el aprendizaje asíncrono,DHP
+28,14,el diseño para el aprendizaje asíncrono,DAV
+29,15,el diseño para el aprendizaje síncrono,ACC
+30,15,el diseño para el aprendizaje síncrono,DHP
+30,16,los estilos de lenguaje y escritura,DAV
+31,16,los estilos de lenguaje y escritura,ACC
+31,17,las salidassyllabus y guiones del curso,DHP
+32,18,el proyecto Integrador,DAV

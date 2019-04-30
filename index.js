@@ -43,9 +43,10 @@ app.use((error, req, res, next) => {
     sql: error.sql,
   };
 
-  fs.writeFileSync(path.join(__dirname, 'logs', `error-${new Date().toISOString()}.log`), JSON.stringify(err, null, 4));
+  // eslint-disable-next-line max-len
+  // fs.writeFileSync(path.join(__dirname, 'logs', `error-${new Date().toISOString()}.log`), JSON.stringify(err, null, 4));
 
-  return res.status(500).send({ msg: 'Error en el servidor.' });
+  return res.status(500).send({ msg: 'Error en el servidor.', err });
 });
 
 app.listen(config.port, (err) => {

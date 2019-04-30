@@ -1,16 +1,12 @@
 const router = require('express').Router();
-const usuariosRoutes = require('./usuarios');
-const middlewares = require('../middlewares');
-const usuariosCtrl = require('../controllers/usuarios');
+const clientesRoutes = require('./clientes');
+const subirPlaneacionRoutes = require('./subir_planeacion');
 
 router.route('/')
-  .get((req, res) => res.send({ msg: 'sistema planeacion API' }));
-
-router.route('/login')
-  .post(usuariosCtrl.login);
-
-router.use('/usuarios', middlewares.verifyToken, usuariosRoutes);
+  .get((req, res) => res.send({ msg: 'Project management API' }));
 
 
+router.use('/clientes', clientesRoutes);
+router.use('/subir_planeacion', subirPlaneacionRoutes);
 
 module.exports = router;
