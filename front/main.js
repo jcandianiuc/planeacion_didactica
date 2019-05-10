@@ -5,6 +5,9 @@ var main = function() {
     var tk = '';
     var consulta = [];
     var tabla = [];
+    var modalidad = '';
+    var recurso = '';
+    var producto = '';
 
     this.iniciaTemplate = function() {
         su.rest.cargaTemplate ({
@@ -31,11 +34,13 @@ var main = function() {
     };
 
     this.procesaConsulta = function(consulta) {
+        self.unirTxt(consulta);
+        console.log(consulta);
         consulta.forEach(function(fila) {
             var datos = {};
             Object.keys(fila).forEach(function(elemento) {
                 var key = self.eliminarDiacriticos(elemento);
-                if (elemento != 'token') datos[key] = fila[elemento];
+                if (elemento != 'token' || elemento != 'txtProducto' || elemento != 'txtModalidad' || elemento != 'txtRecurso') datos[key] = fila[elemento];
             })
             tabla.push(datos);
         })
@@ -48,6 +53,23 @@ var main = function() {
         texto = texto.replace(g,'');
         texto = texto.replace(e,'');
         return texto;
+    };
+
+    this.unirTxt = function(consulta) {
+        consulta.forEach(function(fila) {
+            Object.keys(fila).forEach(function(elemento) {
+                if(elemento == 'modalidad') {
+                    fila[elemento] = fila[elemento] + '. \n' + fila.txtModalidad;
+                }
+                else if(elemento == 'recurso') {
+                    fila[elemento] = fila[elemento] + '. \n' + fila.txtRecurso;
+                }
+                else if(elemento == 'producto') {
+                    fila[elemento] = fila[elemento] + '. \n' + fila.txtProducto;
+                }
+            });
+        })
+        console.log(consulta);
     };
 
     this.construyeTabla = function(datos) {
@@ -71,7 +93,7 @@ var main = function() {
 
     this.obtenerConfiguracion = function() {
         return Promise.resolve($.ajax({
-            url: "http://localhost:3000/planeacion?token=" + tk, 
+            url: "http://192.168.40.145:3000/obtener_planeacion/" + tk, 
             type: "GET",
         }));
     };
