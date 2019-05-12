@@ -93,7 +93,7 @@ var main = function() {
 
     this.obtenerConfiguracion = function() {
         return Promise.resolve($.ajax({
-            url: "http://192.168.40.145:3000/obtener_planeacion/" + tk, 
+            url: "http://192.168.40.145:3000/obtener_planeacion/tk1", 
             type: "GET",
         }));
     };
