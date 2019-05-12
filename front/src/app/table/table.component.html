@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="header">
+                    <div class="col-md-6">
+                        <h4 class="title">Planeacion Didactica Subida</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="dropdown">
+                                <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
+                                    Clases
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#paper">Programacion de Aplicaciones</a></li>
+                                    <li><a href="#paper">Mineria de datos</a></li>
+                                    <li><a href="#paper">Negocios Electronicos</a></li>
+                                </ul>
+                            </div>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-default" (click)="getProducts()">Recargar</button>
+                    </div>
+                    
+                </div>
+
+                <div class="content table-responsive table-full-width">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Experiencias</th>
+                            <th>Tecnica</th> 
+                            <th>Ambiente</th>
+                            <th>Modalidad</th>
+                            <th>txtModalidad</th>
+                            <th>Recurso</th>
+                            <th>Producto</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let p of products">
+                            <td >{{p.experiencias}}</td>
+                            <td >{{p.tecnica}}</td>
+                            <td >{{p.ambiente}}</td>
+                            <td >{{p.modalidad}}</td>
+                            <td >{{p.txtModalidad}}</td>
+                            <td >{{p.recurso}}</td>
+                            <td >{{p.producto}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
